@@ -1,8 +1,4 @@
 FROM openjdk:17
-LABEL maintainer="Anurag Tandulwadkar"
-WORKDIR /app
-COPY . /app
-EXPOSE 3000
-EXPOSE $PORT
+ADD target/Demo.jar app.jar 
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
