@@ -1,4 +1,4 @@
 FROM openjdk:17
-COPY target/Demo.jar /app.jar
+ADD target/Demo.jar /Demo.jar
 
-CMD ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
